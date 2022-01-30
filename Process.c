@@ -21,18 +21,34 @@ int main ( int argc , char * argv []) {
 	pid_t pid ;
 	//printf("v Before Process\n"); 
 	pid = fork();
-	if ( pid == -1) {
-		printf ("# Creation of a child process was unsuccessful.\n");
-		return -1;
-	} else {
-		if( pid > 0){
-			// Returned to parent or caller. The value contains process ID of newly created child process.
-			printf ("PID %d Process Dad\n" , getpid () ) ;
-		} else {
-			// Returned to the newly created child process
-			printf ("PID %d\tProcess Son\n" , getpid () );
-		}
+
+	int valores=2;
+	int primo=0;
+	int divisores=0;
+
+    for(int i=1; i <= g; i=i)
+	{
+		primo=0;
+		// Calcular divisores del numero
+		for(divisores=2;divisores<=valores-1 && primo==0;divisores++)
+			{
+			// Comprobar si existe un divisor
+			if(valores%divisores==0) primo=1;
+			}
+		// Si no se ha encontrado ningun divisor el valor de primo no
+		// ha cambiado y por tanto el numero del bucle principal examinado
+		// es un valor primo
+	   	if(primo==0) 
+		   	{
+			printf ("Process %d:" , getpid () ) ;
+			printf("El Numero %d es Primo.\n",valores);
+			i++;
+			sleep(1);
+			}
+		valores++;
 	}
+
+	
 	//printf("^  After Process\n"); 
 	return 0;
 }
