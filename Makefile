@@ -1,3 +1,5 @@
+.PHONY: Thread, Process
+
 MyExample: 
 	gcc -lpthread Example.c && ./a.out
 	

@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h> 
+#include <signal.h>
 
 int g = 0;
 
@@ -26,7 +27,7 @@ int main ( int argc , char * argv []) {
 	int primo=0;
 	int divisores=0;
 
-    for(int i=1; i <= g; i=i)
+    	for(int i=1; i <= g; i=i)
 	{
 		primo=0;
 		// Calcular divisores del numero
@@ -40,7 +41,7 @@ int main ( int argc , char * argv []) {
 		// es un valor primo
 	   	if(primo==0) 
 		   	{
-			printf ("Process %d:" , getpid () ) ;
+			printf ("Process %d: " , getpid () ) ;
 			printf("El Numero %d es Primo.\n",valores);
 			i++;
 			sleep(1);
@@ -50,5 +51,7 @@ int main ( int argc , char * argv []) {
 
 	
 	//printf("^  After Process\n"); 
+        kill(pid, SIGTERM);
+	printf("Fin.\n"); 
 	return 0;
 }
