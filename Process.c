@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h> 
-#include <Windows.h>
-#include <conio.h>
 
 int g = 0;
 

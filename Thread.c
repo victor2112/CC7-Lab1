@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h> 
-#include <Windows.h>
-#include <conio.h>
 
 int g = 0;
 
@@ -32,7 +30,7 @@ void *myThread(void *vargp) {
 			printf("Thread %d: ", *myid);
 			printf("El Numero %d es Primo.\n",valores);
 			i++;
-			Sleep(1);
+			sleep(1);
 			}
 		valores++;
 	}

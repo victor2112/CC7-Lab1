@@ -2,7 +2,7 @@ MyExample:
 	gcc -lpthread Example.c && ./a.out
 	
 Thread:
-	gcc -o Thread -lpthread Thread.c 
+	gcc -o Thread -pthread Thread.c 
 	./Thread
 	
 Process:
