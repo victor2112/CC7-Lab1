@@ -1,0 +1,21 @@
+1) Thread y Proceso
+	a) ¿Qué es un Thread?
+		Es una unidad de ejecucion con una secuencia de instrucciones. Se reduce a una instancia de rutina o procedimiento tambien llamados task.
+	b) ¿Qué es un Process?
+		Es la ejecucion de un programa el cual puede ser ejecutado por Batch Processing, Concurrencia, Paralelo o una combinacion de las anteriores.
+	c) ¿Cuáles son sus diferencias?
+		Un Process esta compuesto de al menos un Thread el cual puede ser ejecutado de distintas maneras, dependiendo de la programacion de los Thread.
+2) ¿Qué es Multi-Threading?
+		Es la programacion del flujo de un proceso dividida en varios Threads que pueden ser ejecutados concurrentemente y/o en paralelo.
+3) ¿Qué es Multi-Processing?
+		Es un CPU multi-core el cual permite ejecutar en paralelo mas de un Thread. 
+4) En un CPU single-core.
+	a) ¿Cuál es la cantidad de Threads y/o Process que
+	puede soportar ese tipo de procesador?
+		Uno a la vez, si tenemos tiempos cortos de ejecucion por Thread podriamos tener la ilusion de paralelismo.
+	b) ¿De qué depende la cantidad de Threads y/o Process
+	en el CPU?
+		Depende de velocidad de procesamiento ya que solo cuenta con un nucleo de procesamiento.
+	c) ¿Si fuera Multi-core, tiene más Threads y/o Process,
+	explique tomando un CPU con esa característica?
+		El CPU tiene la capacidad de mas Threads y/o Process ya que tiene mas nucleos para procesar. Pero depende de los programas si aprovechan con multi-threading para que el CPU pueda hacer uso de todos los nucleos.
